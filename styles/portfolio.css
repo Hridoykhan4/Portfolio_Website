@@ -47,7 +47,7 @@ nav a {
   padding: 15px 35px;
   color: white;
   font-size: 20px;
-  font-weight: 700px;
+  font-weight: 700; /* Corrected */
 }
 
 .banner {
@@ -206,4 +206,38 @@ footer{
   background: #FFF8F3;
   padding: 130px 200px;
   margin-top: 10px;
+}
+
+.footer-column{
+  width: 50%;
+  gap: 100px;
+}
+
+.social-icons{
+  margin-top: 20px;
+}
+
+.social-icons img{
+  padding: 10px;
+}
+
+.contact input[type="text"], input[type=email],textarea{
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 5px;
+  background-color: #FFF;
+}
+
+.btn{
+ display: block;
+ border-radius: 5px;
+ background-color: rgb(253, 110, 10);
+ border: 0;
+ padding: 15px 35px;
+ color: white;
+ font-size: 20px;
+ font-weight: 700;
 }
