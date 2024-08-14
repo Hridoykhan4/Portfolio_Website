@@ -10,6 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/portfolio.css" />
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Web Portfolio Project</title>
   </head>
@@ -42,7 +44,8 @@
     </header>
 
     <main>
-      <section class="about">
+      <!-- About me section -->
+      <section class="about hide">
         <h3 class="section-title">About me</h3>
         <p class="about-desciption">
           I, m a designer & developer with a passion for web design. I enjoy
@@ -72,7 +75,7 @@
       </section>
 
       <!-- What I do section -->
-      <section>
+      <section class="hide">
         <h3 class="do-title">What I Do</h3>
         <p class="do-desc">
           I have more than 10 years experience building software for clients all
@@ -81,6 +84,7 @@
           experience? Check out my online resume and project portfolio.
         </p>
 
+        <!-- skill section -->
         <div class="skill-container">
           <div class="skill">
             <img src="images/icons/js.png" alt="" />
@@ -122,7 +126,7 @@
       </section>
 
       <!-- resume section -->
-      <section class="resume">
+      <section class="resume hide">
           <h3 class="section-title">A Summary of my resume</h3>
 
         <div class="resume-container">
@@ -139,7 +143,7 @@
               
               
               <div class="resume-item">
-                <h2 class="resume-item-title">Master in Computer Engineering</h2>
+                <h2 class="resume-item-title">Bachelor in Computer Engineering</h2>
                 <h3 class="resume-item-institute">Harvard University / 2015 - 2017</h3>
                 <p class="resume-item-description">List skill/technologies here. You can change the icon above 
                   to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor.</p>
@@ -194,36 +198,26 @@
       </section>
     </main>
 
-    <footer>
-
+    <!-- footer section -->
+    <footer class="hide">
       <div class="footer-column">
           <h3 class="section-title">Lets Connect</h3>
-          <p class="section-description">
-            Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Monday through Friday.
-          </p>
-          <div class="social-icons">
-            <a href="#"><img src="images/icons/facebook.png" alt=""></a>
-
-            <a href="#"><img src="images/icons/twitter.png" alt=""></a>
-
-            <a href="#"><img src="images/icons/insta.png" alt=""></a>
+          <p>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Sunday through Thursday.</p>
+          <div>
+              <a href=""><img src="images/icons/facebook.png" alt=""></a>
+              <a href=""><img src="images/icons/insta.png" alt=""></a>
+              <a href=""><img src="images/icons/twitter.png" alt=""></a>
           </div>
       </div>
-
-
       <div class="footer-column">
-         <h3 class="section-title">Let's Message me</h3>
-         <form action="" class="contact">
-            <input type="text" placeholder="Your Name">
-            <input type="email" name="" placeholder="Your Email" id="">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-          <input type="submit" class="btn" value="Submit">
-
+          <h3 class="section-title">Let’s Inbox me</h3>
+          <form action="">
+              <input type="text" name="" id="" placeholder="Your Name">
+              <input type="email" name="" id="" placeholder="Your Email">
+              <textarea name="" id="" cols="30" rows="20" placeholder="Message"></textarea>
+              <input class="btn-primary" type="submit" value="Submit">
           </form>
       </div>
-
-
-
-    </footer>
+  </footer>
   </body>
 </html>

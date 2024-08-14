@@ -16,7 +16,7 @@ body {
 }
 
 .nav-title {
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 800px;
 }
 
@@ -46,7 +46,7 @@ nav a {
   padding: 15px 35px;
   color: white;
   font-size: 20px;
-  font-weight: 700; /* Corrected */
+  font-weight: 700;
 }
 
 .banner {
@@ -87,7 +87,7 @@ main {
 }
 
 /* about section */
-.about {
+.about{
   padding: 100px;
   text-align: center;
   background-color: #fff8f3;
@@ -100,7 +100,7 @@ main {
   text-align: center;
 }
 
-.about-desciption {
+.about-desciption{
   font-weight: 30px;
   font-size: 20px;
 }
@@ -153,12 +153,14 @@ main {
 .skill-description {
   color: #747474;
 }
+/* Resume Section Styles */
+
 
 .resume {
   margin-top: 100px;
 }
 
-/* Resume Section Styles */
+
 
 .resume-column-title {
   color: #474747;
@@ -199,44 +201,119 @@ main {
 }
 
 /* footer section start */
-
 footer{
+  padding: 130px 230px;
   display: flex;
-  background: #FFF8F3;
-  padding: 130px 200px;
-  margin-top: 10px;
-}
-
-.footer-column{
-  width: 50%;
   gap: 100px;
 }
-
-.social-icons{
-  margin-top: 20px;
+.footer-column{
+  width: 50%;
 }
 
-.social-icons img{
-  padding: 10px;
-}
-
-.contact input[type="text"], input[type=email],textarea{
-  display: block;
-  margin-bottom: 10px;
-  width: 100%;
-  border: none;
-  padding: 18px 30px;
+footer input[type="text"],  footer input[type="email"], footer textarea{
+  height: 64px;
   border-radius: 5px;
-  background-color: #FFF;
+  background-color: white;
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 24px;
+  border: none;
 }
 
-.btn{
- display: block;
- border-radius: 5px;
- background-color: rgb(253, 110, 10);
- border: 0;
- padding: 15px 35px;
- color: white;
- font-size: 20px;
- font-weight: 700;
+
+
+
+.hide{
+  display: none;
+}
+
+/* responsive */
+
+@media screen and (max-width:576px) 
+{
+
+  .header{
+    background-image: none;
+      padding: 98px;
+
+  }
+
+  .banner .profile-pic {
+    width: 100%;
+    display: block;
+}
+
+  .skill-container,.resume-container,.about-info-container{
+    flex-direction: column;
+
+  }
+  .do-desc{
+    padding: 20px;
+    text-align: left;
+    line-height: 2rem;
+  }
+  footer,.about,.banner{
+    flex-direction: column;
+    padding: 20px;
+  }
+  .footer-column{
+    width: 100%;
+  }
+  footer input[type="text"],  footer input[type="email"], footer textarea{
+    width: 70%;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    margin: 0px 200px;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+  }
+  .nav-title {
+    font-size: 50px;
+    margin-right: 47px;
+}
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  flex-direction: column;
+  margin-right: 123px;
+  text-align: center;
+}
+
+.btn-primary{
+  margin-bottom: 10px;
+}
+
+}
+
+
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  nav > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      margin-right: 123px;
+      text-align: center;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: space-evenly;
+      margin-top: 116px;
+      margin-left: -227px;
+  }
+  .header{
+    background-image: none;
+  }
+  .btn-primary{
+    margin-bottom: 10px;
+  }
+
+  .banner .profile-pic {
+    width: 100%;
+    display: block;
+}
 }
