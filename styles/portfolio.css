@@ -1,3 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .header {
   background-color: #fff8f3;
   background-image: url("../images/header_bg.png") , url('../images/developer.png');
@@ -8,16 +18,15 @@
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 0px 200px;
+  align-items: center;
+  padding: 0 7rem;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
+
 
 .nav-title {
-  font-size: 50px;
-  font-weight: 800px;
+  font-size: 3rem;
+  font-weight: 800;
 }
 
 .text-primary {
@@ -27,11 +36,12 @@ body {
 nav > ul {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 nav li {
   list-style: none;
-  margin: 50px;
+  margin: 1rem;
 }
 
 nav a {
@@ -50,15 +60,14 @@ nav a {
 }
 
 .banner {
-  padding: 30px 30px 0px 150px;
-  margin-left: 30px;
+  padding: 30px 30px 0px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .banner .profile-pic {
-  width: 500px;
+  width: 30rem;
 }
 
 .banner-greetings {
@@ -69,46 +78,62 @@ nav a {
 
 .banner-title {
   margin-top: 0px;
+  font-size: 3rem;
+  background-image: linear-gradient(to bottom right, #FF3E9D, #0E1F40);
+  font-weight: bolder;
+  background-clip: text;
+  color: transparent;
 }
 
 .banner-content {
   max-width: 500px;
+  padding: 1rem;
 }
 
 .banner-desc {
   font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 2;
 }
 
 /* main section */
 
 main {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1240px;
 }
 
 /* about section */
 .about{
-  padding: 100px;
+  padding: 4rem;
   text-align: center;
   background-color: #fff8f3;
-  margin: 10px 40px;
+  margin: 0.6rem 2.6rem;
+  border: 1px solid yellow;
 }
 
 .section-title {
-  font-weight: 40px;
-  font-size: 35px;
+  font-weight: 900;
+  font-size: 2rem;
   text-align: center;
+  margin-bottom: 0.8rem;
 }
 
 .about-desciption{
-  font-weight: 30px;
-  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+  font-size: 1rem;
+  margin: 1.3rem 0;
 }
 
 .about-info-container {
   display: flex;
   text-align: center;
   justify-content: space-around;
+  gap: 0.8rem;
 }
 
 .about-info {
@@ -116,9 +141,9 @@ main {
 }
 
 .info-title {
-  font-size: small;
+  font-size: 1rem;
   font-weight: lighter;
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 .info-description {
@@ -140,12 +165,12 @@ main {
 /* Skill styles */
 .skill-container {
   display: flex;
-  gap: 24px;
+  gap: 1.6rem;
 }
 
 .skill {
   padding: 30px;
-  box-shadow: 1px 2px 3px rgba(0, 1, 0, 0.2);
+  box-shadow: 1px 2px 20px rgba(0, 1, 0, 0.2);
   border-radius: 5px;
   background-color: #fff;
 }
@@ -157,9 +182,8 @@ main {
 
 
 .resume {
-  margin-top: 100px;
+  margin-top: 5rem;
 }
-
 
 
 .resume-column-title {
@@ -171,6 +195,7 @@ main {
 .resume-container {
   display: flex;
   gap: 50px;
+  padding: 2rem;
 }
 
 .resume-item-institute,
@@ -202,12 +227,51 @@ main {
 
 /* footer section start */
 footer{
-  padding: 130px 230px;
+  padding: 4rem 4rem;
   display: flex;
   gap: 100px;
 }
+
+.footer-column p{
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+.footer-column .footer-icons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: black;
+  padding: 0.4rem;
+  border-radius: 30px;
+  border: 3px solid green;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.footer-icons a {
+  display: inline-block;
+}
+
+.footer-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: filter 0.3s, transform 0.3s;
+  filter: grayscale(100%); 
+}
+
+.footer-icons a:hover img {
+  filter: grayscale(0); 
+  transform: scale(1.2); 
+}
+
+
 .footer-column{
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 footer input[type="text"],  footer input[type="email"], footer textarea{
@@ -227,17 +291,16 @@ footer input[type="text"],  footer input[type="email"], footer textarea{
 
 @media screen and (max-width:576px) 
 {
-
-  .header{
-    background-image: none;
-      padding: 98px;
-
+  .banner{
+    padding: 0px;
+    flex-direction: column;
   }
 
   .banner .profile-pic {
     width: 100%;
-    display: block;
 }
+
+
 
   .skill-container,.resume-container,.about-info-container{
     flex-direction: column;
@@ -245,70 +308,111 @@ footer input[type="text"],  footer input[type="email"], footer textarea{
   }
   .do-desc{
     padding: 20px;
-    text-align: left;
+    text-align: center;
     line-height: 2rem;
   }
   footer,.about,.banner{
     flex-direction: column;
     padding: 20px;
+    gap: 2rem;
   }
   .footer-column{
     width: 100%;
   }
   footer input[type="text"],  footer input[type="email"], footer textarea{
-    width: 70%;
+    width: 100%;
+  }nav h3{
+    text-align: center;
   }
   nav{
-    display: flex;
     justify-content: center;
-    margin: 0px 200px;
-    flex-wrap: wrap;
-    align-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .nav-title {
-    font-size: 50px;
-    margin-right: 47px;
+    font-size: 3rem;
 }
 nav > ul {
   display: flex;
   flex-direction: column;
   align-items: normal;
   flex-direction: column;
-  margin-right: 123px;
   text-align: center;
 }
 
 .btn-primary{
   margin-bottom: 10px;
 }
-
+.about{
+  padding: 1rem;
+  margin: 1rem;
+}.skill{
+  padding: 1rem;
+}
+.resume-container{
+  gap: 1rem;
+  width: 95%;
+}
+  
 }
 
-
-
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  nav > ul {
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-      margin-right: 123px;
-      text-align: center;
-      flex-wrap: wrap;
-      align-content: space-between;
-      justify-content: space-evenly;
-      margin-top: 116px;
-      margin-left: -227px;
+
+  footer{
+    padding: 1.3rem;
+    gap: 10px;
   }
-  .header{
-    background-image: none;
+
+
+  .footer-column p{
+    line-height: 1.6;
+    letter-spacing: 0px;
   }
+
+  .resume-container{
+    padding: 1rem;
+  }
+
+  .skill{
+    padding: 1.3rem;
+  }
+
+  .about{
+    padding: 2rem;
+    margin: 1.4rem;
+  }
+  
+  .do-desc{
+    padding: 2rem;
+  }
+
+  nav h3{
+    text-align: center;
+  }
+  nav{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .nav-title {
+    font-size: 3rem;
+}
+nav > ul {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary{
+  margin-bottom: 10px;
+}
   .btn-primary{
     margin-bottom: 10px;
   }
 
   .banner .profile-pic {
-    width: 100%;
-    display: block;
+    max-width: 50%;
+}.banner{
+  padding: 0px 20px;
 }
 }
